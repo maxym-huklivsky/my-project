@@ -32,4 +32,52 @@ a {
 	text-decoration: none;
 }
 
+.container {
+	width: 1324px;
+	padding: 0 15px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 /* Header */
+.header-container {
+	display: flex;
+	align-items: center;
+}
+
+.nav {
+	display: flex;
+	align-items: center;
+}
+
+.header-logo {
+	margin-right: 285px;
+}
+
+.nav-list {
+	display: flex;
+	gap: 40px;
+
+	font-size: 14px;
+	line-height: 120%;
+	text-transform: uppercase;
+}
+
+.nav-link {
+	display: block;
+	padding: 30px 0;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+	color: deeppink;
+}
+
+.search-icon:hover,
+.search-icon:focus {
+	fill: deeppink;
+}
+
+.search-icon {
+	margin-left: auto;
+}
