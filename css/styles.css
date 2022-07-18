@@ -44,9 +44,9 @@ a {
 	padding: 14px 53px;
 
 	font-size: 18px;
-	line-height: 120%;
 	border: 1px solid #e04387;
 	border-radius: 200px;
+	line-height: 120%;
 }
 
 .button:hover,
@@ -73,8 +73,8 @@ a {
 
 	font-family: var(--secondary-font);
 	font-size: 14px;
-	line-height: 120%;
 	text-align: center;
+	line-height: 120%;
 }
 
 /* Header */
@@ -96,8 +96,8 @@ a {
 	display: flex;
 	gap: 40px;
 
-	font-size: 14px;
 	line-height: 120%;
+	font-size: 14px;
 	text-transform: uppercase;
 }
 
@@ -135,6 +135,7 @@ a {
 }
 
 .hero-title {
+	margin-top: 145px;
 	margin-bottom: 20px;
 
 	font-family: var(--secondary-font);
@@ -146,5 +147,110 @@ a {
 .hero-description {
 	margin-bottom: 30px;
 
+	line-height: 120%;
+}
+
+/* Categories */
+.categories {
+	padding-top: 110px;
+	padding-bottom: 70px;
+}
+
+.categories-list {
+	display: flex;
+}
+
+.categories-item {
+	box-shadow: 0px 4px 35px rgba(0, 0, 0, 0.25);
+}
+
+.categories-wrapper {
+	padding: 30px;
+}
+
+.phones-tablet>.categories-wrapper {
+	text-align: center;
+}
+
+.laptop .categories-title,
+.laptop .categories-description,
+.watch .categories-title,
+.watch .categories-description {
+	text-align: right;
+}
+
+.categories-title {
+	font-weight: 400;
+	font-size: 15px;
+	line-height: 128%;
+}
+
+.categories-description {
+	font-family: var(--secondary-font);
+	font-size: 32px;
+	line-height: 120%;
+}
+
+.laptop {
+	margin-bottom: 72px;
+	width: 639px;
+	height: 472px;
+}
+
+.watch {
+	display: flex;
+	align-items: center;
+
+	width: 639px;
+	height: 270px;
+}
+
+.phones-tablet {
+	margin-left: 16px;
+	width: 312px;
+	height: 792px;
+}
+
+/* Selled  */
+.selled {
+	padding-bottom: 50px;
+}
+
+.selled-list {
+	display: flex;
+	gap: 28px;
+}
+
+.selled-item {
+	width: 302.5px;
+}
+
+.selled-pic {
+	margin: 0 auto 33px;
+}
+
+.selled-wrapper {
+	padding: 15px;
+}
+
+.selled-title {
+	margin-bottom: 10px;
+
+	font-family: var(--secondary-font);
+	font-weight: 400;
+	font-size: 22px;
+	line-height: 125%;
+}
+
+.selled-description {
+	margin-bottom: 25px;
+
+	font-size: 14px;
+	line-height: 120%;
+	color: #4B4B4B;
+}
+
+.selled-price {
+	font-size: 18px;
 	line-height: 120%;
 }
