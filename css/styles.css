@@ -5,6 +5,7 @@
 
 body {
 	font-family: var(--main-font);
+	padding-top: 80px;
 }
 
 h1,
@@ -78,6 +79,13 @@ a {
 }
 
 /* Header */
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
 .header-container {
 	display: flex;
 	align-items: center;
@@ -117,7 +125,7 @@ a {
 }
 
 .search {
-	margin-left: auto;
+	margin-left: 300px;
 }
 
 /* Hero */
