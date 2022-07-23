@@ -5,7 +5,7 @@
 
 body {
 	font-family: var(--main-font);
-	padding-top: 80px;
+	padding-top: 77px;
 }
 
 h1,
@@ -41,6 +41,8 @@ a {
 }
 
 .button {
+	transition: color 250ms, background-color 250ms;
+
 	display: inline-block;
 	padding: 14px 53px;
 
@@ -83,7 +85,16 @@ a {
 	position: fixed;
 	top: 0;
 	left: 0;
+
 	width: 100%;
+}
+
+.header.no-transparency {
+	z-index: 1000;
+
+	background-color: rgb(255, 20, 147, 0.6);
+	backdrop-filter: blur(4px);
+	background-color: rgb(0, 255, 255, 0.6);
 }
 
 .header-container {
@@ -103,20 +114,76 @@ a {
 .nav-list {
 	display: flex;
 	gap: 40px;
+}
+
+.nav-item {
+	position: relative;
+}
+
+.nav-link {
+	position: relative;
+	transition: color 250ms;
+
+	display: block;
+	padding: 30px 0;
 
 	line-height: 120%;
 	font-size: 14px;
 	text-transform: uppercase;
 }
 
-.nav-link {
-	display: block;
-	padding: 30px 0;
-}
-
 .nav-link:hover,
 .nav-link:focus {
 	color: deeppink;
+}
+
+.nav-link::after {
+	content: '';
+
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	transform-origin: left;
+	transform: scaleX(0);
+	transition: transform 250ms;
+
+	display: block;
+	width: 100%;
+	height: 4px;
+	background-color: deeppink;
+	border-radius: 4px;
+}
+
+.nav-link:hover::after,
+.nav-link:focus::after {
+	transform: scale(1);
+}
+
+.subnav {
+	position: absolute;
+	top: 100%;
+	left: 0;
+
+	display: none;
+	width: 100%;
+	padding: 15px;
+
+	background-color: rgb(255, 153, 204, 0.2);
+	backdrop-filter: blur(4px);
+}
+
+.nav-item:hover .subnav {
+	display: block;
+}
+
+.subnav-link {
+	display: block;
+	padding: 5px 0;
+}
+
+.subnav-link:hover,
+.subnav-link:focus {
+	color: #00ffff;
 }
 
 .search:hover,
@@ -251,7 +318,7 @@ a {
 }
 
 .selled-description {
-	margin-bottom: 25px;
+	margin-bottom: 8px;
 
 	font-size: 14px;
 	line-height: 120%;
@@ -261,4 +328,64 @@ a {
 .selled-price {
 	font-size: 18px;
 	line-height: 120%;
+}
+
+.selled-description.down {
+	margin-bottom: 25px;
+}
+
+/* Подпишись */
+.btn-subscribe {
+	position: relative;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 25px 60px;
+	margin-left: 200px;
+	margin-top: 50px;
+	margin-bottom: 100px;
+	width: 400px;
+
+	border: 2px solid red;
+	border-radius: 20px;
+	overflow: hidden;
+	background: linear-gradient(to top right, #f9ed32, #ee2a7b, #002aff);
+}
+
+.btn-subscribe:hover .instagram-icon,
+.btn-subscribe:focus .instagram-icon,
+.btn-subscribe:hover .happy-icon,
+.btn-subscribe:focus .happy-icon {
+	transform: translateY(-70px);
+}
+
+.btn-text {
+	margin-right: 15px;
+
+	font-size: 40px;
+	font-weight: 700;
+	color: rgb(255, 255, 255, 0.8);
+	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-subscribe:hover .btn-text,
+.btn-subscribe:focus .btn-text {
+	color: white;
+}
+
+.instagram-icon,
+.happy-icon {
+	width: 36px;
+	height: 36px;
+	fill: transparent;
+	stroke: white;
+
+	transition: transform 250ms linear;
+}
+
+.happy-icon {
+	position: absolute;
+	right: 60px;
+	top: 100px;
 }

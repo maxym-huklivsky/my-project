@@ -16,7 +16,7 @@
 </head>
 
 <body>
-	<header class="header">
+	<header class="header" data-header>
 		<div class="container header-container">
 			<nav class="nav">
 				<a class="header-logo" href="./index.html">
@@ -25,7 +25,15 @@
 					</svg>
 				</a>
 				<ul class="nav-list">
-					<li class="nav-item"><a class="nav-link" href="">All products</a></li>
+					<li class="nav-item">
+						<a class="nav-link" href="">All products</a>
+						<!-- <ul class="subnav">
+							<li class="subnav-item"><a class="subnav-link" href="">Phones</a></li>
+							<li class="subnav-item"><a class="subnav-link" href="">Watch</a></li>
+							<li class="subnav-item"><a class="subnav-link" href="">Tablet</a></li>
+							<li class="subnav-item"><a class="subnav-link" href="">Laptops</a></li>
+						</ul> -->
+					</li>
 					<li class="nav-item"><a class="nav-link" href="">Solutions</a></li>
 					<li class="nav-item"><a class="nav-link" href="">About</a></li>
 					<li class="nav-item"><a class="nav-link" href="">Support</a></li>
@@ -107,7 +115,8 @@
 						<img src="./images/MacBook-Pro.webp" alt="MacBook-Pro" class="selled-pic" width="247">
 						<div class="selled-wrapper">
 							<h3 class="selled-title">MacBook Pro 13</h3>
-							<p class="selled-description">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet</p>
+							<p class="selled-description down">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet
+							</p>
 							<p class="selled-price">$ 1,200.00 USD</p>
 						</div>
 					</li>
@@ -152,8 +161,21 @@
 	</main>
 
 	<footer class="footer">
-		<div class="container"></div>
+		<div class="container">
+			<!-- Кнопка "Подпишись" -->
+			<a class="btn-subscribe" href="">
+				<span class="btn-text">Подпишись</span>
+				<svg class="instagram-icon">
+					<use href="./images/icons.svg#instagram"></use>
+				</svg>
+				<svg class="happy-icon">
+					<use href="./images/icons.svg#happy"></use>
+				</svg>
+			</a>
+		</div>
 	</footer>
+
+	<script src="./js/header-scroll.js"></script>
 </body>
 
 </html>
